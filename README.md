@@ -1,4 +1,6 @@
-# Semantic Communications with AI Techniques
+# XAI for AI-Driven Semantic Communications
+
+![Overview](datasets/xai_image_diagram.png)
 
 This repository explores how semantic communications can be implemented across two different scenarios, utilizing Convolutional Neural Networks (CNN) and You Only Look Once (YOLO) frameworks. Semantic communications focus on transmitting the meaning or semantic content of the data rather than the full raw data. By only sending the essential information, we can reduce bandwidth usage, lower latency, and potentially improve system efficiency.
 
@@ -12,10 +14,6 @@ In particular, recent work on beyond 5G and emerging 6G networks has highlighted
 - [Overview](#overview)
 - [Scenario 1: ASL Semantic Transmission](#scenario-1-asl-semantic-transmission)
 - [Scenario 2: V2X Semantic Transmission](#scenario-2-v2x-semantic-transmission)
-- [Directory Structure](#directory-structure)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
 - [Contact](#contact)
 
 ---

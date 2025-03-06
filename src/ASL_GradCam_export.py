@@ -9,9 +9,16 @@ import matplotlib.pyplot as plt
 import os
 import preprocess
 
-### Placeholder ###
-model = tf.keras.models.load_model("models/trained_model.model") # Load the pre-trained model
-### Placeholder ###
+# === Placeholder: Load Pre-Trained Model ===  
+# Specify the path to your saved model file. This could be a `.h5`, `.tf`, or other model format.
+model_path = "path_to_your_model_file"  # Path to the pre-trained model file
+try:
+    model = tf.keras.models.load_model(model_path)  # Attempt to load the model from the specified path
+    print(f"Model successfully loaded from: {model_path}")  # Confirmation message
+except Exception as e:
+    print(f"Error loading model from {model_path}: {str(e)}")  # Error handling in case the model loading fails
+# ============================================
+
 
 # Define the class labels
 class_labels = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y"]
@@ -36,7 +43,7 @@ def predict_image(image_path):
 
 # GradCAM Implementation for multiple convolutional layers
 def generate_gradcam(model, image, predicted_class_index):
-    conv_layers = ['conv2d_1', 'conv2d_2', 'conv2d_3'] # Define the convolution layers
+    conv_layers = ['conv2d_1', 'conv2d_2', 'conv2d_5'] # Define the convolution layers
     heatmaps = {}
     
     for layer_name in conv_layers:
